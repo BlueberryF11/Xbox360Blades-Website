@@ -1,41 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#777d80"><meta name="description" content="A browser recreation of the original Xbox 360 Blades dashboard.">
-<title>Xbox 360 Dashboard</title><link rel="stylesheet" href="index.css"><script src="index.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#777b80">
+<meta name="description" content="An independent browser recreation of the Xbox 360 Metro dashboard, build 2.0.17559.0.">
+<title>Xbox 360 Dashboard</title>
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
 </head>
 <body>
-<main class="tv" aria-label="Xbox 360 dashboard recreation">
-  <div class="screen">
-    <div class="screen-glare"></div>
-    <div class="side-tabs left-tabs" id="left-tabs" aria-label="Previous blades"></div>
-    <section class="active-blade" id="active-blade">
-      <header class="blade-header">
-        <h1 id="page-title">Welcome to Xbox Live</h1>
-        <div class="xbox-mark"><span class="xbox-orb">X</span><span>XBOX <b>360</b></span></div>
-      </header>
-      <div class="blade-main">
-        <div class="item-list-wrap">
-          <div class="list-heading" id="list-heading">Xbox Live</div>
-          <div class="item-list" id="item-list" role="listbox" aria-label="Dashboard items"></div>
-          <div class="scroll-cue">⌄</div>
-        </div>
-        <aside class="preview" id="preview" aria-live="polite">
-          <div class="preview-art" id="preview-art"><div class="art-orbit"></div><div class="art-mark" id="art-mark">X</div></div>
-          <h2 id="preview-title">Connect to Xbox Live</h2>
-          <p id="preview-description">Create a profile and connect with friends, games, and entertainment.</p>
-          <div class="content-rating"><span>Available Content</span><div class="rating-icons"><i>◉</i><i>▦</i></div></div>
-        </aside>
+<main class="dashboard" aria-label="Xbox 360 dashboard recreation">
+  <header class="topbar">
+    <nav class="tabs" aria-label="Dashboard sections">
+      <button class="tab active" data-page="home">home</button>
+      <button class="tab" data-page="social">social</button>
+      <button class="tab" data-page="settings">settings</button>
+    </nav>
+    <button class="profile-chip" id="profile-chip" aria-label="Current profile">
+      <span class="gamertag">Player 1</span><span class="gamerpic"><span>☺</span></span>
+    </button>
+  </header>
+
+  <section class="page active" id="home" aria-label="Home">
+    <div class="home-grid">
+      <button class="tile console-ad" data-title="Xbox Series X|S">
+        <span class="console-art"><i class="console-x"></i><i class="console-s"></i></span>
+        <span class="tile-copy"><strong>Xbox Series X|S</strong><small>Explore the next generation</small></span>
+      </button>
+      <button class="tile qr-ad" data-title="Experience next-gen performance">
+        <span class="qr-code" aria-hidden="true"><i></i></span>
+        <span class="qr-copy">Experience next-gen performance.<br>Upgrade today.</span>
+      </button>
+      <button class="tile green tile-apps" data-title="My Apps"><span class="glyph windows-glyph">▦</span><span>Apps</span></button>
+      <button class="tile green tile-profile" data-title="Profile"><span class="glyph">♟</span><span>Profile</span></button>
+      <button class="tile green tile-account" data-title="Account"><span class="glyph">♟⚙</span><span>Account</span></button>
+    </div>
+  </section>
+
+  <section class="page" id="social" aria-label="Social">
+    <div class="social-layout">
+      <div class="social-tiles">
+        <button class="tile green" data-title="Friends"><span class="glyph">♟</span><span>Friends</span></button>
+        <button class="tile green" data-title="Activity"><span class="glyph">▤</span><span>Activity</span></button>
+        <button class="tile green" data-title="Sign In or Out"><span class="glyph">⇄</span><span>Sign In or Out</span></button>
       </div>
-      <footer class="blade-footer">
-        <div class="footer-left"><span><b class="y">Y</b><span id="y-action">Search</span></span><span><b class="x">X</b>Legal Information</span></div>
-        <div class="footer-right"><span><b class="b">B</b> Back</span><span><b class="a">A</b> Select</span></div>
-      </footer>
-    </section>
-    <div class="side-tabs right-tabs" id="right-tabs" aria-label="Next blades"></div>
-  </div>
-  <div class="bezel-bottom"><span>◉</span><span>XBOX 360</span><span class="bezel-light"></span></div>
+      <div class="avatar-stage">
+        <div class="speech"><strong>Xbox LIVE</strong><span>Go online to play games, watch movies, and find friends.</span><small>➜ Join the fun</small></div>
+        <div class="avatar avatar-one"><i class="hair"></i><i class="face"></i><i class="body"></i><i class="legs"></i></div>
+        <div class="avatar avatar-two"><i class="hair"></i><i class="face"></i><i class="body"></i><i class="legs"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="settings" aria-label="Settings">
+    <div class="settings-grid">
+      <button class="tile green" data-title="System"><span class="glyph">▤</span><span>System</span></button>
+      <button class="tile green" data-title="Profile"><span class="glyph">♟</span><span>Profile</span></button>
+      <button class="tile green" data-title="Preferences"><span class="glyph">☷</span><span>Preferences</span></button>
+      <button class="tile green" data-title="Kinect"><span class="glyph">▰</span><span>Kinect</span></button>
+      <button class="tile green" data-title="Account"><span class="glyph">♟⚙</span><span>Account</span></button>
+      <button class="tile green" data-title="Privacy"><span class="glyph">▣</span><span>Privacy</span></button>
+      <button class="tile green" data-title="Family"><span class="glyph">♧</span><span>Family</span></button>
+      <button class="tile green" data-title="Turn Off"><span class="glyph power">⏻</span><span>Turn Off</span></button>
+    </div>
+  </section>
+
+  <footer class="controller-hint"><span><b class="a-button">A</b> Select</span><span class="hint-right">Xbox 360</span></footer>
+  <div class="selection-toast" id="toast" role="status"></div>
 </main>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-</body></html>
+</body>
+</html>
