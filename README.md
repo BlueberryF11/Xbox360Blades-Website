@@ -1,17 +1,17 @@
-# Xbox 360 Blades Dashboard Recreation
+# Xbox 360 Dashboard Recreation
 
-A responsive browser-based recreation of the classic Xbox 360 Blades-era dashboard interface.
+A browser-based recreation targeting the Xbox 360 Metro dashboard appearance associated with system dashboard build **2.0.17559.0**, including the post-marketplace-shutdown home layout.
 
 ## Deployment
 
-This repository is configured for Cloudflare Workers static assets with Wrangler. The deployment target is the `xbox360blades-website` Worker.
+The intended deployment target is the `xbox360blades-website` Cloudflare Worker. Deploy with Wrangler after configuring the Worker for static assets.
 
 ## Controls
 
-- Click the colored blades to switch sections.
-- Use the arrow keys to navigate.
-- Press Enter to select.
-- Use Q / E to switch blades.
-- Swipe left or right on touchscreens.
+- Click Home, Social, or Settings to switch sections.
+- Use arrow keys to move the selection.
+- Press Enter or Space to select a tile.
+- Press Tab to cycle sections.
+- Swipe horizontally on touchscreens.
 
-This is an independent browser recreation for nostalgia and interface experimentation. It is not an official Microsoft or Xbox product.
+This is an independent browser recreation, not an official Microsoft or Xbox product. Some artwork and account details are CSS-built placeholders rather than original console assets.
