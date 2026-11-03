@@ -1,4 +1,17 @@
-# Xbox360BladesWebsite
-An HTML/CSS/JS website template inspired by the Xbox 360 blades dashboard.
+# Xbox 360 Blades Dashboard Recreation
 
-View website: <a href="http://hongaaronc.github.io/Xbox360BladesWebsite/">http://hongaaronc.github.io/Xbox360BladesWebsite/</a>
+A responsive browser-based recreation of the classic Xbox 360 Blades-era dashboard interface.
+
+## Deployment
+
+This repository is configured for Cloudflare Workers static assets with Wrangler. The deployment target is the `xbox360blades-website` Worker.
+
+## Controls
+
+- Click the colored blades to switch sections.
+- Use the arrow keys to navigate.
+- Press Enter to select.
+- Use Q / E to switch blades.
+- Swipe left or right on touchscreens.
+
+This is an independent browser recreation for nostalgia and interface experimentation. It is not an official Microsoft or Xbox product.
