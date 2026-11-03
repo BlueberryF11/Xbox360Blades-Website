@@ -1,275 +1,30 @@
-﻿<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Aaron Hong - Game Developer">
-    <meta name="keywords" content="Game Developer, Game Programmer, Programming, Game Design, Web Design, Computer Science, University of Southern California, Aaron Hong, SUNDOWN">
-    <meta name="author" content="Aaron Hong">
-    <title>Aaron Hong - Game Developer</title>
-    <!--CSS Files to include-->
-    <link href="index.css" rel='stylesheet' type='text/css'>
-    <!--Fonts to include-->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <!--JS Files to include-->
-    <script type="text/javascript">
-        if (screen.width <= 699) {
-            document.location = "mobile.html";
-        }
-        if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-            location.replace("mobile.html");
-        }
-    </script>
-    <script src="index.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07101b">
+<meta name="description" content="Interactive recreation of the classic Xbox 360 Blades dashboard interface.">
+<title>Xbox 360 Blades</title><link rel="stylesheet" href="index.css"><script src="index.js" defer></script>
 </head>
-<body onresize="activateSelected();">
-    <div id="dimmer"></div>
-    <div id="clipping_container">
-        <h1 style="font-size:90px; text-align:center; color:#999; margin-top:300px; margin-bottom:20px;">Welcome</h1>
-        <h4 style="font-size:24px; text-align:center; color:#999; margin-top:0px;">Loading...</h4>
-        <div class="card" style="transform:translate(00px, 0px);" onclick="select(this)">
-            <a href="#"><div class="card_header" style="background-color:#AA3322;">
-                <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">HOME</div></div></h1>
-            </div></a>
-            <div class="card_body">
-                <h1 style="font-size:72px; text-align:center;">Aaron Hong</h1>
-                <div style="width:400px; height:400px; background-color:#CCC; border-radius:50%; text-align:center; margin:auto; background-image:url('http://i.imgur.com/37UiyIZ.gif'); background-size:cover; background-position:center;"></div>
-                <h2 style="font-size: 24px; text-align: center;">Video Game Designer / Programmer</h2>
-                <ul class="contact_list horizontal">
-                    <li>
-                        <a href="mailto:hong.aaron.c@gmail.com">
-                            <div class="contact_thumbnail horizontal" style="background-image: url('http://euannliu.com/img/frame/social_email.png');"></div>
-                            <!--<div class="contact_body"><h5>Email</h5>hong.aaron.c@gmail.com</div>-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/nostril">
-                            <div class="contact_thumbnail horizontal" style="background-image: url('http://euannliu.com/img/frame/social_facebook.png');"></div>
-                            <!--<div class="contact_body"><h5>Facebook</h5>Aaron Hong</div>-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/hongaaronc">
-                            <div class="contact_thumbnail horizontal" style="background-image: url('http://euannliu.com/img/frame/social_linkedin.png');"></div>
-                            <!--<div class="contact_body"><h5>LinkedIn</h5>hongaaronc</div>-->
-                        </a>
-                    </li>
-                    <!--<li>
-                        <a href="http://steamcommunity.com/profiles/76561198010800142/">
-                            <div class="contact_thumbnail horizontal" style="background-image: url('http://vignette4.wikia.nocookie.net/fallout/images/3/3b/Steam-Logo.png');"></div>
-                            <!--<div class="contact_body"><h5>Steam</h5>Nostril</div>-->
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="card" style="transform:translate(50px, 0px);" onclick="select(this)">
-            <a href="#"><div class="card_header" style="background-color:#dd6000">
-                <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">ABOUT</div></div></h1>
-            </div></a>
-            <div id="about" class="card_body">
-                <h1>Hi, I'm Aaron Hong.</h1>
-                <!--<p>I am a junior pursuing a B.S. in Computer Science Games at the University of Southern California. I have been teaching myself programming on my own and developing games in Flash since 6th grade. Now, I am developing Unity games as a student at USC.</p>-->
-                <p>Check out my work in the "Games" and "Other" tabs.</p>
-                <p>In the "Games" tab, the works I have spent the most time on that I am most proud of are in the "Extended Development Projects" section. The "Game Jam Projects" section has games I made in 24-48 hours. The "Classwork" section has projects I made as classwork at USC, all of which are still uniquely designed and programmed. Most of these projects are group projects. The "Flash Projects" section has games that I worked on as a hobby in middle school. These are very old but are pretty cool to look at looking back.</p>
-                <p>For more information on any of the projects I worked on, check out my LinkedIn page in the "Contact" section. Here I describe the specifics of what I worked on for each project and the other team members that made all of these possible.</p>
-                <p>This site is still under construction, so expect some parts of it to have placeholder frames for images and temporary stuff!</p>
-            </div>
-        </div>
-        <div class="card" style="transform:translate(100px, 0px);" onclick="select(this)">
-            <a href="#"><div class="card_header" style="background-color:#ddca00">
-                <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">MY WORKS</div></div></h1>
-            </div></a>
-            <div class="card_body">
-                <h2 class="games_category">Game Projects</h2>
-                <ul class="works_list">
-                    <li>
-                        <a href="http://www.sundown-game.com">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/5YADF3t.gif')"></div>
-                            <h3>AT SUNDOWN</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://skyshotgame.com/">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/5rV1VqU.gif')"></div>
-                            <h3>Skyshot</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://youtu.be/PR5MiUkL1kc">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/ONBkQTG.gif')"></div>
-                            <h3>Wandering Among Giants</h3>
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="games_category">Game Jam Projects</h2>
-                <ul class="works_list">
-                    <li>
-                        <a href="http://globalgamejam.org/2015/games/you-were-born-do">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/Ug7g3BD.gif')"></div>
-                            <h3>You Were Born To Do This</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/Toppletarian">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/s7ZeJdO.gif')"></div>
-                            <h3>Toppletarian</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/WiggleForceOne.zip">
-                            <div class="work_thumbnail" style="background-image:url('./img/wf1.png')"></div>
-                            <h3>Narwhal Simulator (Download Link)</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/PenumbraWeb/">
-                            <div class="work_thumbnail" style="background-image:url('./img/PenumbraPic.jpg')"></div>
-                            <h3>Penumbra</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/Sisyphus/">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/Wf1CAJE.gif')"></div>
-                            <h3>Sisyphus</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/UltimateSpaceCombat/">
-                            <div class="work_thumbnail" style="background-image:url('')"></div>
-                            <h3>Ultimate Space Combat</h3>
-                        </a>
-                    </li>
-                </ul>
-
-                <h2 class="games_category">Classwork</h2>
-                <ul class="works_list">
-                    <li>
-                        <a href="https://youtu.be/ZST35m6uDAU">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/yKg2j0S.gif')"></div>
-                            <h3>Seal Team 6: Arctic Warfare</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/YohanesSimulator">
-                            <div class="work_thumbnail" style="background-image:url('./img/Asteroids.png')"></div>
-                            <h3>Yohanes Simulator (Asteroids)</h3>
-                        </a>
-                    </li>
-                </ul>
-
-                <h2 class="games_category">Flash Projects</h2>
-                <ul class="works_list">
-                    <li>
-                        <a href="https://chrome.google.com/webstore/detail/power-pong/mlgadfplmfongjpjbgkfdddccloogehj">
-                            <div class="work_thumbnail" style="background-image:url('https://lh4.googleusercontent.com/A08YX6t6aYZ7pwSs5s3JuHYX4XAjL6deS1H95qKP1hdn0C07Dp6gePJeyRDzUYwR45Z46xYW=s640-h400-e365-rw')"></div>
-                            <h3>Power Pong</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://moo12321.deviantart.com/art/Last-Sanctuary-147907545">
-                            <div class="work_thumbnail" style="background-image:url('http://img00.deviantart.net/1604/i/2009/358/4/2/last_sanctuary_by_moo12321.png')"></div>
-                            <h3>Last Sanctuary</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://moo12321.deviantart.com/art/Commanding-Ship-AI-Concept-167311253">
-                            <div class="work_thumbnail" style="background-image:url('http://img09.deviantart.net/189c/i/2009/137/9/2/gc_gameplay_v0_07_by_moo12321.png')"></div>
-                            <h3>Galactic Conflict</h3>
-                        </a>
-                    </li>
-                </ul>
-                <h2 class="games_category">Websites</h2>
-                <ul class="works_list">
-                    <li>
-                        <a href="http://aaron-hong.com">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/37UiyIZ.gif')"></div>
-                            <h3>This Website!</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://aaron-hong.com/SoundTrek/">
-                            <div class="work_thumbnail" style="background-image:url('http://i.imgur.com/JZqxSjO.png')"></div>
-                            <h3>SoundTrek</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.sundown-game.com">
-                            <div class="work_thumbnail" style="background-image:url('http://cloud-3.steamusercontent.com/ugc/1471902277028946350/858ED88FBE2DDC5772796A7E0EEEB4E99E1CDC24/')"></div>
-                            <h3>SUNDOWN Website</h3>
-                        </a>
-                    </li>
-                    <!--<li>
-                        <a href="http://euannliu.com/">
-                            <div class="work_thumbnail" style="background-image:url('http://euannliu.com/img/index/title_image.jpg')"></div>
-                            <h3>Eu-Ann Liu's Website</h3>
-                        </a>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="card" style="transform:translate(150px, 0px);" onclick="select(this)">
-            <a href="#"><div class="card_header" style="background-color:#109223;">
-                <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">PORTFOLIO</div></div></h1>
-            </div></a>
-            <div class="card_body">
-                <div style="text-align:center; margin-top:350px;">
-                    <h3>My portfolio website is still under construction.</h3>
-                    <p>Please browse this file dump, which contains samples of my work and designs.</p>
-                    <p><a href="http://www.aaron-hong.com/portfolio">PORTFOLIO FILES</a></p>
-                </div>
-            </div>
-        </div>
-        <!--<div class="card" style="transform:translate(200px, 0px);" onclick="select(this)">
-            <a href="#"><div class="card_header" style="background-color:#0094dd">
-                <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">RESUME</div></div></h1>
-            </div></a>
-            <div class="card_body">
-                <a href="https://docs.google.com/document/d/11NvdR6iiCL93PuNJgDZrenDdDYmiu_SHw-PnzN_tj9M/edit?usp=sharing"><h1 style="font-size:60px; text-align:center; margin-top:350px; margin-bottom:20px;">Here is a link to my resume</h1></a>
-            </div>
-        </div>-->
-        <div class="card" style="transform:translate(200px, 0px);" onclick="select(this)">
-            <a href="#">
-                <div class="card_header" style="background-color:#0094dd">
-                    <h1><div class="card_header_rotation_container"><div class="card_header_alignment_container">CONTACT</div></div></h1>
-                </div>
-            </a>
-            <div class="card_body">
-                <h1 style="margin:36px; font-size:48px;">Contact me through:</h1>
-                <ul class="contact_list">
-                    <li>
-                        <a href="mailto:hong.aaron.c@gmail.com">
-                            <div class="contact_thumbnail" style="background-image: url('http://euannliu.com/img/frame/social_email.png');"></div>
-                            <div class="contact_body"><h5>Email</h5>hong.aaron.c@gmail.com</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/nostril">
-                            <div class="contact_thumbnail" style="background-image: url('http://euannliu.com/img/frame/social_facebook.png');"></div>
-                            <div class="contact_body"><h5>Facebook</h5>Aaron Hong</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/hongaaronc">
-                            <div class="contact_thumbnail" style="background-image: url('http://euannliu.com/img/frame/social_linkedin.png');"></div>
-                            <div class="contact_body"><h5>LinkedIn</h5>hongaaronc</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://steamcommunity.com/profiles/76561198010800142/">
-                            <div class="contact_thumbnail" style="background-image: url('http://vignette4.wikia.nocookie.net/fallout/images/3/3b/Steam-Logo.png');"></div>
-                            <div class="contact_body"><h5>Steam</h5>Nostril</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <script>
-    // self executing function here
-    (function() {
-        selectIndex(0);
-    })();
-    </script>
-</body>
-</html>
+<body>
+<main class="console" aria-label="Xbox 360 Blades dashboard">
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar"><div class="brand"><span class="orb"><i></i></span><span>XBOX</span><b>360</b></div><div class="system-status"><i></i><span id="clock">--:--</span><span class="divider"></span>CONNECTED</div></header>
+<nav class="blade-nav" aria-label="Dashboard sections" role="tablist">
+<button class="blade-tab live active" role="tab" aria-selected="true" data-blade="0"><span>◉</span>Xbox Live</button>
+<button class="blade-tab games" role="tab" aria-selected="false" data-blade="1"><span>✦</span>Games</button>
+<button class="blade-tab media" role="tab" aria-selected="false" data-blade="2"><span>♫</span>Media</button>
+<button class="blade-tab system" role="tab" aria-selected="false" data-blade="3"><span>⚙</span>System</button>
+</nav>
+<section class="dashboard">
+<div class="blade-edge"></div><div class="blade-content">
+<div class="blade-heading"><div><div class="eyebrow" id="blade-kicker">XBOX LIVE</div><h1 id="blade-title">Welcome to Xbox Live</h1></div>
+<div class="profile-chip"><div class="avatar">G</div><div><strong>Guest</strong><small>Sign in to your profile</small></div></div></div>
+<div class="content-grid"><div class="menu-column"><div class="menu-label">DASHBOARD</div><div id="menu-items" class="menu-items" role="listbox" aria-label="Dashboard options"></div>
+<div class="nav-hint"><span class="dpad">✥</span> Navigate <span class="button-hint">A</span> Select <span class="button-hint">B</span> Back</div></div>
+<article class="feature-panel" aria-live="polite"><div class="feature-art" id="feature-art"><div class="rings"></div><div class="feature-symbol" id="feature-symbol">◉</div><div class="feature-stamp">XBOX 360</div></div>
+<div class="feature-copy"><div class="eyebrow" id="feature-kicker">WELCOME</div><h2 id="feature-title">Your entertainment starts here.</h2><p id="feature-description">Connect, play, and explore your Xbox 360 dashboard.</p><button id="action-button" class="action-button">Explore <span>›</span></button></div></article></div>
+</div></section>
+<footer class="footer"><span>◀ <b>LB</b> <b>RB</b> Switch blades</span><span>Xbox 360 Dashboard • Browser recreation</span><span id="footer-section">XBOX LIVE</span></footer>
+</main><div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
